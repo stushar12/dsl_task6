@@ -110,3 +110,16 @@ fi
 ''')
 }
 }
+
+
+
+buildPipelineView("Pipeline view") {
+  filterBuildQueue(true)
+  filterExecutors(false)
+  title("DSL pipeline")
+  displayedBuilds(1)
+  selectedJob("devops_task6_job1")
+  alwaysAllowManualTrigger(true)
+  showPipelineParameters(true)
+  refreshFrequency(60)
+}

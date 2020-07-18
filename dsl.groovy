@@ -66,7 +66,7 @@ job("devops_task6_job3"){
 		upstream('devops_task6_job2' , 'SUCCESS')
 	}
 	steps{
-		shell('''status=$(curl -o /dev/null  -s  -w "%{http_code}"  192.168.99.101:30100)
+		shell('''status=$(curl -o /dev/null  -s  -w "%{http_code}"  http://192.168.99.101:30100/a.php)
 if [ $status == 200 ]
 then
 exit 1

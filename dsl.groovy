@@ -81,16 +81,7 @@ else
 sudo kubectl create -f /task6_devops/deploy.yml
 sleep 10
 fi
-
-
-if sudo kubectl get pods | grep running
-then
-exit 0
-else
-echo "Pod is not running"
-fi
 ''')
-
 }
 
 

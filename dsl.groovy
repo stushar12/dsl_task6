@@ -36,12 +36,6 @@ then
 echo "php container is running"
 else
 sudo kubectl create -f /task6_devops/deploy.yml
-POD=$(sudo kubectl get pod -l server=apache-httpd -o jsonpath="{.items[0].metadata.name}")
-sleep 10
-for file in $data
-do
-sudo kubectl cp /task6_devops/$file $POD:/var/www/html/
-done
 fi
 else
 echo "No php code found"
